@@ -1,28 +1,42 @@
 Answer each question in a written format
 
 1. What does semantic HTML mean?
+Tags like <section> or <article> that have real meaning, as opposed to generic <div>'s and <span>'s
 
 2. What is the box model?
+It is how the part of css is defined that deals with the size of elements, their content, padding, border, and margin.
 
 3. What is the difference between IDs and Classes?
+ID's should be unique to an element.  Many elements can have the same class.  They have different selectors: .class-name or #id-name
 
 4. What does the z-index do?
+When elements overlap, the one with highest z-index will be visible. 
 
 5. Summarize what the keyword 'this' is used for?
+When a function is called, it refers to the object the function is attached to as a method or explicitly bound to.
 
 6. What is a callback?
+Could refer to any function that is passed as an argument to another function, to be called by that function.  Most often used specifically to describe functions that are called to process the results of the calling function or to be called after the calling function completes.
 
 7. What is a closure?
+A variable scope that is created when a function still needs access to variables that would otherwise be garbage-collected.
 
 8. How does prototype work?
+An object can be defined with it's prototype as another object and inherit properties and methods that way.
+It is most commonly used with Object.prototype and Array.prototype
 
 9. What is MVC?
+The design technique that separates parts of an application to keep complexity from getting out of hand.  Data and its manipulation are handled in the "model,"  what the user sees is handled together in the "view," and the logic that connects them is put into a "controller"
 
 10. What is the component lifecycle?
+It is the steps a react component goes through on its way to being rendered on the DOM and then removed.
+As the lifecycle is completed, some functions are called which are named based on which step of the cycle the element is going through.  I learned about it for the first time today and haven't used it, so I don't remember many specifics.
 
 11. What is REST?
+REST refers to CRUD over http.  After coming back to this question, I still can't remember where the name comes from.  It'll come back to me eventually.
 
 12. Name three ways of getting data from the URL using express
+which endpoint the request goes to, its parameters, or its queries
 
 create table users (
 id serial,
@@ -33,9 +47,15 @@ email varchar(255)
 12. Given the Schema above, write the following four basic CRUD db queries using postgres syntax
 
 -Get all users:
-
+SELECT * FROM users;
 -Create a new user with the name of 'your name' and an email of 'fake@fake.com':
-
+INSERT INTO users (name, email) VALUES ('your name', 'fake@fake.com');
 -Update the newly created user's name to 'Bobby Boy':
-
+UPDATE name FROM user WITH 'Bobby Boy' WHERE email='fake@fake.com';
 -Delete the newly updated user:
+DELETE FROM users WHERE email='fake@fake.com';
+
+The above answers are my best attempt with no resources.  The below answer was found using psql:
+-Update the newly created user's name to 'Bobby Boy':
+UPDATE users set name = 'Bobby Boy' WHERE email = 'fake@fake.com';
+

@@ -59,7 +59,8 @@ module.exports = {
   // uncomment the log1 and log2 properties and give your answers as their values
 
     log1:'Hello World',
-    log2:'Helloundefined'
+    log2:undefined //should be 'ReferenceError: bar is not defined' or at least 'Hello' + undefined which
+    // javascript aparently thinks should be the string: 'Helloundefined' !!!
 }
 
 
